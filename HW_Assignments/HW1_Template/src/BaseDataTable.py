@@ -7,8 +7,8 @@ import logging
 
 class BaseDataTable(ABC):
     """
-    The implementation classes (XXXDataTable) for CSV database, relational, etc. will extend this
-    base class and implement the abstract methods. This approximates Java interfaces.
+    The implementation classes (XXXDataTable) for CSV database, relational, etc. will extend the
+    base class and implement the abstract methods.
     """
 
     def __init__(self, table_name, connect_info, key_columns=None, debug=True):
@@ -21,8 +21,10 @@ class BaseDataTable(ABC):
             the columns are ['playerID', 'teamID', 'yearID']
         :param debug: If true, print debug messages.
         """
-        pass
-
+        self._table_name = table_name
+        self._connect_info = connect_info
+        self._key_columns = key_columns
+        self._debug = debug
 
     @abstractmethod
     def find_by_primary_key(self, key_fields, field_list=None):

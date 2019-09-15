@@ -6,7 +6,7 @@ from os.path import isfile, join
 import shutil
 
 
-_directory = "C:\\Users\\dferguso\\ansys_one_drive\\Columbia\\W4111f19\\w4111-Databases\\Data\\lahman2019"
+_directory = "/Users/xuwan/Graduate Study/19fall/Introduction to Databases/4111_19FALL/Data/lahman2019"
 _upload_dir = 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads'
 
 cnx = pymysql.connect(host='localhost',
